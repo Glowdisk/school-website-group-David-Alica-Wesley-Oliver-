@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Profile</title>
+  <style>
+    :root {
+      --bg1: #f5f7ff;
+      --bg2: #dfe9ff;
+      --bg3: #cfe0ff;
+      --glass: rgba(63, 164, 211, 0.623);
+      --glass-border: rgba(255, 255, 255, 0.52);
+      --text: #132238;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: "SF Pro Display", "Segoe UI", sans-serif;
+      color: var(--text);
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.95), transparent 28%),
+        radial-gradient(circle at 80% 25%, rgba(146, 173, 255, 0.5), transparent 30%),
+        radial-gradient(circle at 50% 85%, rgba(130, 206, 255, 0.4), transparent 30%),
+        linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 32%, var(--bg3) 100%);
+      overflow-y: auto;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: min(820px, 88vw);
+      margin: 6vh auto;
+      padding: 3.5rem 2.25rem;
+      border-radius: 32px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.08));
+      border: 1px solid var(--glass-border);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 20px 60px rgba(75, 104, 160, 0.18);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 5vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.065em;
+      font-weight: 800;
+      text-align: center;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    .lorem-list {
+      margin-top: 2.5rem;
+      padding-left: 1.25rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .lorem-list li+li {
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1>This is the landing page for my personal profile.</h1>
+
+    <ul class="lorem-list">
+      <li>hi welcome to this website.</li>
+      <li>that i made.</li>
+      <li>extra text</li>
+      <li>idk what else to put here</li>
+      <li>hello world hello world hello world hello world hello world hello world hello world hello world hello world
+      </li>
+      <li><a
+          href="https://www.google.com/search?q=minesweeper&rlz=1C1GCEB_enUS1232US1232&oq=minesweeper&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGD3SAQgyMDk2ajBqN6gCALACAA&sourceid=chrome&source=chrome.ob&ie=UTF-8&safe=active&ssui=on">Click
+          to play minesweeper!<a></a></li>
+      <li><a
+          href="https://www.google.com/search?q=googl+snake&sca_esv=e20246a2af79b3a3&rlz=1C1GCEB_enUS1232US1232&biw=1600&bih=765&sxsrf=APpeQnsl50WmH2M5ATJOFtUFYe9ck-ZjpQ%3A1789681146505&ei=-l2sar61HsTK0PEPy8CCwAk&uact=5&oq=googl+snake&gs_lp=Egxnd3Mtd2l6LXNlcnAiC2dvb2dsIHNuYWtlMhAQABiABBiKBRhDGLEDGIMBMg8QABiABBgKGAsYsQMYgwEyDxAAGIAEGAoYCxixAxiDATIJEAAYgAQYChgLMgkQABiABBgKGAsyCRAAGIAEGAoYCzIJEAAYgAQYChgLMgkQABiABBgKGAsyCRAAGIAEGAoYCzIJEAAYgAQYChgLSOQRUIYEWJIRcAJ4AZABAJgB-gGgAewLqgEFMC42LjO4AQPIAQD4AQGYAgugApoMqAIUwgIKEAAYRxjWBBiwA8ICDRAAGIAEGIoFGEMYsAPCAg4QABjkAhjWBBiwA9gBAcICFxAuGNwGGLgGGNoGGNgCGMgDGLAD2AEBwgIWEC4YgAQYigUYQxjnBhjqAhi0AtgBAsICFhAAGIAEGIoFGEMY5wYY6gIYtALYAQLCAhAQABgDGI8BGOoCGLQC2AEBwgIQEC4YAxiPARjqAhi0AtgBAcICChAAGIAEGIoFGEPCAhYQLhiABBiKBRhDGLEDGIMBGMcBGNEDwgIKEC4YgAQYigUYQ8ICGRAuGIAEGIoFGEMYlwUY3AQY3gQY3wTYAQHCAgUQABiABMICCBAAGIAEGLQHwgIMEAAYgAQYChgLGLEDmAMF8QU4h-ncDDtLKYgGAZAGE7oGBggBEAEYCboGBAgCGAeSBwUyLjYuM6AH7E6yBwUwLjYuM7gHkAzCBwUwLjUuNsgHI4AIAQ&sclient=gws-wiz-serp&safe=active&ssui=on">Click
+          to play Snake!<a></a>
+      </li>
+      <li><a href="https://dust4wes.github.io/cs-projects/newhtml.html">Click to play other games!<a></a>
+      </li>
+    </ul>
+  </main>
+</body>
+
+</html>

@@ -1,7 +1,6 @@
 :root {
     --bg1: #f5f7ff;
-    --bg2: #ffdfdf;
-    --bg3: #f01111;
+    --bg2: #f01111;
     --glass: rgba(237, 139, 126, 0.623);
     --glass-border: rgba(255, 255, 255, 0.52);
     --text: #000000;
@@ -15,6 +14,7 @@ html,
 body {
     margin: 0;
     font-family: "SF Pro Display", "Segoe UI", sans-serif;
+    font-size: 18px;
     color: var(--text);
 }
 
@@ -24,7 +24,7 @@ body {
         radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.95), transparent 28%),
         radial-gradient(circle at 80% 25%, rgba(255, 146, 146, 0.5), transparent 30%),
         radial-gradient(circle at 50% 85%, rgba(255, 130, 130, 0.4), transparent 30%),
-        linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 32%, var(--bg3) 100%);
+        radial-gradient(15deg, var(--bg1) 20%, var(--bg2) 32%);
     overflow-y: auto;
 }
 
@@ -37,6 +37,15 @@ body::before {
     -webkit-backdrop-filter: blur(18px);
 }
 
+.rectangle {
+    width: 500px;
+    height: 640px;
+    background-color: #fa2e2e;
+    position: absolute;
+    top: 5px;
+    right: 5%;
+}
+
 .card {
     position: relative;
     z-index: 1;
@@ -45,9 +54,9 @@ body::before {
     justify-content: flex-start;
     width: min(400px, 88vw);
     min-height: 120px;
-    margin: 6vh 0 6vh 800px;
+    margin: 1rem 0 1rem 800px;
     padding: 1rem 2.25rem;
-    border-radius: 32px;
+    border-radius: 4px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.812), rgba(255, 255, 255, 0.623));
     border: 5px solid var(--glass-border);
     box-shadow:
@@ -69,6 +78,16 @@ h1 {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+h2 {
+    position: relative;
+    top: 0;
+    font-size: clamp(2.3rem, 3vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.065em;
+    font-weight: 800;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
 img {
     width: 80px;
     height: 80px;
@@ -77,5 +96,5 @@ img {
     top: 15px;
     border-radius: 50%;
     margin-right: 20px;
-    object-fit: scale-down;
+    object-fit: contain;
 }

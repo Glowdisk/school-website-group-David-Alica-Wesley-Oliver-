@@ -3,7 +3,7 @@
     --bg2: #f01111;
     --glass: rgba(237, 139, 126, 0.623);
     --glass-border: rgba(255, 255, 255, 0.52);
-    --text: #000000;
+    --text: #2f2f2f;
 }
 
 * {
@@ -39,7 +39,7 @@ body::before {
 
 .rectangle {
     width: 500px;
-    height: 640px;
+    height: 680px;
     background-color: #fa2e2e;
     position: absolute;
     top: 5px;
@@ -62,14 +62,15 @@ body::before {
     box-shadow:
         inset 0 3px 0 rgba(255, 255, 255, 0.8),
         0 20px 60px rgba(75, 104, 160, 0.18);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+    overflow: visible;
 }
 
 h1 {
     position: relative;
     top: 0;
-    margin: 0 0 0 80px;
+    margin: 0;
     font-size: clamp(2.3rem, 3vw, 3rem);
     line-height: 1;
     letter-spacing: -0.065em;
@@ -88,13 +89,70 @@ h2 {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+.hover-container {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
 img {
     width: 80px;
     height: 80px;
-    position: fixed;
-    left: 10px;
-    top: 15px;
+    position: relative;
     border-radius: 50%;
-    margin-right: 20px;
     object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.hover-container:hover img {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.information {
+    background-color: #3498db;
+    position: relative;
+    left: 30px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hidden-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 260px;
+    max-width: 80vw;
+    background-color: rgba(51, 51, 51, 0.97);
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    isolation: isolate;
+    pointer-events: none;
+}
+
+.hover-container:hover .hidden-box {
+    display: block;
+}
+
+.card a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
 }

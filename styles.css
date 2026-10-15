@@ -1,3 +1,17 @@
 /* Put ALL css in this file */
 
-/* HI */
+#sportTitle {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000; 
+    font-size: 32px; 
+}
+
+.name{
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: bold;
+    color: #000000; 
+    font-size: 16px; 
+}

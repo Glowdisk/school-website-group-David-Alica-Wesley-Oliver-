@@ -17,7 +17,7 @@ const sportsData = [
     { name: "Girls-Frisbee", coach: "Zeppelin Raunig(zeppelin@allgirleverything.org)", hours: "Everyday 7-9", location: "Field", season: "s"},
     { name: "Boys-Frisbee", coach: "Zeppelin Raunig(zeppelin@allgirleverything.org)", hours: "Everyday 7-9", location: "Field", season: "f"},
     { name: "Fastpitch Softball", coach: "Kiana Camilon(kiana.rose.camilon@gmail.com)",location: "Field", season: "s"},
-    { name: "Slowpitch Softball", coach: "Kiana Camilon(kiana.rose.camilon@gmail.com)", location: "Field", season: "s"}
+    { name: "Slowpitch Softball", coach: "Kiana Camilon(kiana.rose.camilon@gmail.com)", location: "Field", season: "f"}
 
 ];
 

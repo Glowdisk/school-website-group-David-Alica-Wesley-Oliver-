@@ -17,7 +17,7 @@
   </main>
 
   <main class="card">
-    <div class="hover-container">
+    <div class="hover-container" tabindex="0" aria-expanded="false" aria-label="Toggle Schoology description">
       <img
         src="https://play-lh.googleusercontent.com/E3i18vuZ7-svg3xH5ukJrRvkYPIiYM4jDZr0kKag-gTa4ieTQ8uzDlvknvD3v7m9ARo2s0kV-h-Ul2Q2NpR-FCk"
         alt="Schoology logo" />
@@ -29,7 +29,7 @@
   </main>
 
   <main class="card">
-    <div class="hover-container">
+    <div class="hover-container" tabindex="0" aria-expanded="false" aria-label="Toggle The Source description">
       <img src="https://cdn-icons-png.flaticon.com/512/4854/4854186.png" alt="The Source logo" />
       <div class="hidden-box">The Source is the student portal for grades and attendance.</div>
     </div>
@@ -37,7 +37,7 @@
   </main>
 
   <main class="card">
-    <div class="hover-container">
+    <div class="hover-container" tabindex="0" aria-expanded="false" aria-label="Toggle Clever description">
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA7_xXcd6s27JQP2KAGwBRDht8GlpXCTLJe8NbeGN4MkxAnZBsKfvmRXM&s=10"
         alt="Clever logo" />
@@ -47,6 +47,28 @@
     </div>
     <h1><a href="https://clever.com/in/seattleschools">Clever</a></h1>
   </main>
+
+  <script>
+    document.querySelectorAll('.hover-container').forEach((container) => {
+      const setExpanded = (expanded) => {
+        container.classList.toggle('is-open', expanded);
+        container.setAttribute('aria-expanded', String(expanded));
+      };
+
+      container.addEventListener('click', () => {
+        const willExpand = !container.classList.contains('is-open');
+        setExpanded(willExpand);
+      });
+
+      container.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          const willExpand = !container.classList.contains('is-open');
+          setExpanded(willExpand);
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

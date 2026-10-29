@@ -1,0 +1,184 @@
+:root {
+    --bg1: #f5f7ff;
+    --bg2: #f01111;
+    --glass: rgba(237, 139, 126, 0.623);
+    --glass-border: rgba(255, 255, 255, 0.52);
+    --text: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: "SF Pro Display", "Segoe UI", sans-serif;
+    font-size: 18px;
+    color: var(--text);
+}
+
+body {
+    min-height: 10vh;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.95), transparent 28%),
+        radial-gradient(circle at 80% 25%, rgba(255, 146, 146, 0.5), transparent 30%),
+        radial-gradient(circle at 50% 85%, rgba(255, 130, 130, 0.4), transparent 30%),
+        radial-gradient(15deg, var(--bg1) 20%, var(--bg2) 32%);
+    overflow-y: auto;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.page-shell {
+    position: relative;
+    width: min(500px, 58vw);
+    margin: 0 clamp(1rem, 3vw, 2rem) 0 auto;
+    padding: 1rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.rectangle {
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    height: 750px;
+    background-color: #fa2e2e;
+    z-index: 0;
+    margin-bottom: 1rem;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    left: 40px;
+    min-height: 120px;
+    margin: 1rem 0;
+    padding: 1rem 2.25rem;
+    border-radius: 4px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.812), rgba(255, 255, 255, 0.623));
+    border: 5px solid var(--glass-border);
+    box-shadow:
+        inset 0 3px 0 rgba(255, 255, 255, 0.8),
+        0 20px 60px rgba(75, 104, 160, 0.18);
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+    overflow: visible;
+}
+
+h1 {
+    position: relative;
+    top: 0;
+    margin: 0;
+    font-size: clamp(2.3rem, 3vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.065em;
+    font-weight: 800;
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+    position: relative;
+    top: 0;
+    font-size: clamp(2.3rem, 3vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.065em;
+    font-weight: 800;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.hover-container {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.hover-container:focus-visible {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.75), 0 0 0 8px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.hover-container:hover img,
+.hover-container:focus-visible img,
+.hover-container.is-open img {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.information {
+    background-color: #3498db;
+    position: relative;
+    left: 30px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hidden-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 260px;
+    max-width: 80vw;
+    background-color: rgba(51, 51, 51, 0.97);
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    isolation: isolate;
+    pointer-events: none;
+}
+
+.hover-container:hover .hidden-box,
+.hover-container:focus-within .hidden-box,
+.hover-container.is-open .hidden-box {
+    display: block;
+}
+
+.card a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}

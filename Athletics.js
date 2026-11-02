@@ -1,23 +1,23 @@
 const sportsData = [
-    { name: "Cross-country", coach: "Daniel Hamiltion (djhamilton@seattleschools.org)", hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Track", season: "f"},
-    { name: "Wrestling", coach: "Daniel Hamiltion (djhamilton@seattleschools.org)",hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Cafeteria", season: "w"},
-    { name: "Track", coach: "Daniel Hamiltion (djhamilton@seattleschools.org)", hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Track", season: "s"},
-    { name: "Football", coach: "Robert Richmonds (richmonds19@outlook.com)",hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Track", season: "f"},
-    { name: "Golf", coach: "Gary Tatterson (gtatterson@hiltoncabinets.com)", hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Jefferson Park Golf Course", season: "f"},
-    { name: "Girls Swim", coach : "Mark Nichols (mcnichols@seattleschools.org)", hours: "Everyday 6:30am-7:45am", location: "Rainer Beach Pool", season: "f"},
-    { name: "Boys Swim", coach : "Mark Nichols (mcnichols@seattleschools.org)", hours: "Everyday 6:30am-7:45am", location: "Rainer Beach Pool", season: "w"},
-    { name: "Vollyball", coach: "Lorna Considine (llconsidine@seattleschools.org)", hours: "JV/JVC 4-5:30, Varsity 5:30-7", location: "Gym", season: "f"},
-    { name: "Girls Basketball", coach: "Victor Smith(vic123_12@hotmail.com)", hours: "Everyday 4:30-6", location: "Gym", season: "w" },
-    { name: "Boys Basketball", coach: "Abdul Mohamad(abmohamad@seattleschools.org)", hours: "Everyday 4:30-6", location: "Gym", season: "w"},
-    { name: "Bowling", coach: "Rickey Davis(rrdavis@seattleschools.org)", season: "w"},
-    { name: "Girls Flag Football", coach: "Kevin Hernandez(kjhernandez@seattleschools.org)", location: "Field", season: "w"},
-    { name: "Tennis", coach: "Rodger Yamaguichi(rogersyamaguchi@hotmail.com)", hours: "M,Tu,Th,F 4-6pm, W 2:45-6", location: "Jefferson Park Tennis Courts", season: "s"},
-    { name: "Baseball", coach: "Gary Tatterson(gtatterson@hiltoncabinets.com)", location: "Field", season: "s" },
-    { name: "Boys Soccer", coach: "Adnan Omer(adnanomeradi@gmail.com)", location: "Field", season: "s"},
-    { name: "Girls-Frisbee", coach: "Zeppelin Raunig(zeppelin@allgirleverything.org)", hours: "Everyday 7-9", location: "Field", season: "s"},
-    { name: "Boys-Frisbee", coach: "Zeppelin Raunig(zeppelin@allgirleverything.org)", hours: "Everyday 7-9", location: "Field", season: "f"},
-    { name: "Fastpitch Softball", coach: "Kiana Camilon(kiana.rose.camilon@gmail.com)",location: "Field", season: "s"},
-    { name: "Slowpitch Softball", coach: "Kiana Camilon(kiana.rose.camilon@gmail.com)", location: "Field", season: "f"}
+    { name: "Cross-country", coach: "Daniel Hamiltion (djhamilton@seattleschools.org)", hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Track", season: "fall"},
+    { name: "Wrestling", coach: "Mitchell Torres (mjtorres@seattleschools.org)",hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Cafeteria", season: "winter"},
+    { name: "Track", coach: "Rickey Davis (rrdavis@seattleschools.org)", hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Track", season: "spring"},
+    { name: "Football", coach: "Robert Richmonds (richmonds19@outlook.com)",hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Track", season: "fall"},
+    { name: "Golf", coach: "Gary Tatterson (gtatterson@hiltoncabinets.com)", hours: "M,Tu,Th,F 4-6pm, W 2:45-4:45", location: "Jefferson Park Golf Course", season: "fall"},
+    { name: "Girls Swim", coach : "Mark Nichols (mcnichols@seattleschools.org)", hours: "Everyday 6:30am-7:45am", location: "Rainer Beach Pool", season: "fall"},
+    { name: "Boys Swim", coach : "Mark Nichols (mcnichols@seattleschools.org)", hours: "Everyday 6:30am-7:45am", location: "Rainer Beach Pool", season: "winter"},
+    { name: "Vollyball", coach: "Lorna Considine (llconsidine@seattleschools.org)", hours: "JV/JVC 4-5:30, Varsity 5:30-7", location: "Gym", season: "fall"},
+    { name: "Girls Basketball", coach: "Chakeitha Wigfall (chwigfall@seattleschools.org)", hours: "Everyday 4:30-6", location: "Gym", season: "winter" },
+    { name: "Boys Basketball", coach: "Abdul Mohamad(abmohamad@seattleschools.org)", hours: "Everyday 4:30-6", location: "Gym", season: "winter"},
+    { name: "Bowling", coach: "Rickey Davis (rrdavis@seattleschools.org)", season: "winter"},
+    { name: "Girls Flag Football", coach: "Kevin Hernandez(kjhernandez@seattleschools.org)", location: "Field", season: "winter"},
+    { name: "Tennis", coach: "Rodger Yamaguichi(rogersyamaguchi@hotmail.com)", hours: "M,Tu,Th,F 4-6pm, W 2:45-6", location: "Jefferson Park Tennis Courts", season: "spring"},
+    { name: "Baseball", coach: "Gary Tatterson(gtatterson@hiltoncabinets.com)", location: "Field", season: "spring" },
+    { name: "Boys Soccer", coach: "Adnan Omer(adnanomeradi@gmail.com)", location: "Field", season: "spring"},
+    { name: "Girls-Frisbee", coach: "Zeppelin Raunig(zeppelin@allgirleverything.org)", hours: "Everyday 7-9", location: "Field", season: "spring"},
+    { name: "Boys-Frisbee", coach: "Zeppelin Raunig(zeppelin@allgirleverything.org)", hours: "Everyday 7-9", location: "Field", season: "fall"},
+    { name: "Fastpitch Softball", coach: "Kiana Camilon(kiana.rose.camilon@gmail.com)",location: "Field", season: "spring"},
+    { name: "Slowpitch Softball", coach: "Kiana Camilon(kiana.rose.camilon@gmail.com)", location: "Field", season: "fall"}
 
 ];
 
@@ -50,19 +50,21 @@ sportsData.forEach(sport => {
                 hoursElem.textContent = sport.hours;
             }
 
-            if (!sport.location || sport.location.trim() === "" || sport.hours === undefined) {
+            if (!sport.location || sport.location.trim() === "") {
                 locationElem.textContent = "n/a";
             } else {
                 locationElem.textContent = sport.location;
             }
 
             let targetContainerId;
-            if (sport.season === "f") {
+            if (sport.season === "fall") {
                 targetContainerId = "fall-container";
-            } else if (sport.season === "w") {
+            } else if (sport.season === "winter") {
                 targetContainerId = "winter-container";
-            } else if (sport.season === "s") {
+            } else if (sport.season === "spring") {
                 targetContainerId = "spring-container";
+            } else {
+                targetContainerId = "n/a"
             }
 
             const container = document.getElementById(targetContainerId);

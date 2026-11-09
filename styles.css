@@ -1,7 +1,7 @@
 /* Put ALL css in this file */
 
-#math-progression {
-    width: 800px;
+.progression-img {
+    width: 400px;
     height: auto;
-    
+    display: block;
 }

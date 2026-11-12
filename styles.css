@@ -1,5 +1,9 @@
 /* Put ALL css in this file */
 
+.progression-img {
+    width: 400px;
+    height: auto;
+    display: block;
 #sportTitle {
     font-family: Georgia, serif;
     font-style: italic;

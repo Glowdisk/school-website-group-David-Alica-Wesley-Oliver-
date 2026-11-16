@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reference Links</title>
   <link rel="stylesheet" href="homepagestyles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -17,6 +18,14 @@
       <h2>Reference Links</h2>
       <ul class="lorem-list"></ul>
     </div>
+
+<div class="search-container">
+  <input type="search" id="searchBar"
+         placeholder="Search entire website...">
+  <button onclick="searchWebsite()">Search</button>
+</div>
+
+<div id="searchResults"></div>
 
     <div class="card">
       <div class="hover-container" tabindex="0" aria-expanded="false" aria-label="Toggle Schoology description">
@@ -51,6 +60,8 @@
     </div>
   </div>
 
+  <script src = "search.js"></script>
+
   <script>
     document.querySelectorAll('.hover-container').forEach((container) => {
       const setExpanded = (expanded) => {
@@ -72,7 +83,6 @@
       });
     });
   </script>
-</body>
 <h1>
   Cleveland High School contact information
 </h1>
@@ -96,5 +106,5 @@
 
 <img src="https://sportshub2-uploads.vnn-prod.zone/files/sites/2875/2020/12/15121029/EAGLE-1.png"
   alt="Cleveland High School Logo" width="500" height="500">
-
+</body>
 </html>

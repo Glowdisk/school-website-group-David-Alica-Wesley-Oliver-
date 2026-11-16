@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reference Links</title>
+  <link rel="stylesheet" href="homepagestyles.css" />
+</head>
+
+<body>
+
+  <div class="page-shell">
+    <div class="event-card">
+      <a class="event-link"
+        href="https://glowdisk.github.io/school-website-group-David-Alica-Wesley-Oliver-/Athletics.html" target="_blank"
+        rel="noopener noreferrer" aria-label="Open Cleveland High School Sports details">
+        <img src="images/zSPORTPOSTER.jpg" />
+        <span class="event-caption">LAST CHANCE TO SIGN UP FOR SPORTS</span>
+        <span class="event-caption">12/25/2026 Click the link to view info about athletics</span>
+      </a>
+    </div>
+
+    <div class="cards-panel">
+      <div class="rectangle"></div>
+
+      <div class="card">
+        <h2>Reference Links</h2>
+        <ul class="lorem-list"></ul>
+      </div>
+
+      <div class="card">
+        <div class="hover-container" tabindex="0" aria-expanded="false" aria-label="Toggle Schoology description">
+          <img src="images/zSCHOOLOGYLOGO.png" />
+          <div class="hidden-box">
+            Schoology is where students find assignments, class updates, and course resources.
+          </div>
+        </div>
+        <h1><a href="https://districtlms.seattleschools.org/home">Schoology</a></h1>
+      </div>
+
+      <div class="card">
+        <div class="hover-container" tabindex="0" aria-expanded="false" aria-label="Toggle The Source description">
+          <img src="images/zSOURCELOGO.png
+          " />
+          <div class="hidden-box">The Source is the student portal for grades and attendance.</div>
+        </div>
+        <h1><a href="https://ps.seattleschools.org/public/">The Source</a></h1>
+      </div>
+
+      <div class="card">
+        <div class="hover-container" tabindex="0" aria-expanded="false" aria-label="Toggle Clever description">
+          <img src="images/zCLEVERLOGO.jpg" />
+          <div class="hidden-box">
+            Clever gives students quick access to apps and learning tools used in class.
+          </div>
+        </div>
+        <h1><a href="https://clever.com/in/seattleschools">Clever</a></h1>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.hover-container').forEach((container) => {
+      const setExpanded = (expanded) => {
+        container.classList.toggle('is-open', expanded);
+        container.setAttribute('aria-expanded', String(expanded));
+      };
+
+      container.addEventListener('click', () => {
+        const willExpand = !container.classList.contains('is-open');
+        setExpanded(willExpand);
+      });
+
+      container.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          const willExpand = !container.classList.contains('is-open');
+          setExpanded(willExpand);
+        }
+      });
+    });
+  </script>
+</body>
+<h1>
+  Cleveland High School contact information
+</h1>
+
+<h2>
+  Cleveland High School
+  5511 15th Ave S
+  Seattle, WA 98108
+</h2>
+
+<h2><a href="https://glowdisk.github.io/school-website-group-David-Alica-Wesley-Oliver-/info.html">Cleveland High
+    School's Informations page</a>
+</h2>
+
+<h1>
+  Contact Details
+</h1>
+
+<h2>
+  <li>Main office phone: 206-252-7800</li>
+  <li>Main office Fax: 206-252-7801</li>
+  <li>Attendance office phone: 206-252-7804</li>
+  <li>Attendance email: clevelandhs.attendance@seattleschools.org</li>
+  <h2><a
+      href="https://glowdisk.github.io/school-website-group-David-Alica-Wesley-Oliver-/Staff-Directory.html">Cleveland
+      High School's Staff Contact page
+    </a>
+  </h2>
+</h2>
+<img class="cleveland-logo" src="images/zCLEVELANDLOGO.png" width="500" height="500" alt="Cleveland High School logo" />
+
+</html>

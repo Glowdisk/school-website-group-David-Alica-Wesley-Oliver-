@@ -47,10 +47,22 @@
   cursor: pointer;
 }
 
-#searchResults {
-  margin-top: 80px;
+.search-page {
+  max-width: 48rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: "Segoe UI", sans-serif;
 }
 
-#searchResults a {
-  color: #007bff;
+.search-page .search-container {
+  position: static;
+}
+
+.search-page .search-container input {
+  min-width: 0;
+}
+
+#searchResults li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: anywhere;
 }

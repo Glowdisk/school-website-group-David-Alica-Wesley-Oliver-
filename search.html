@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="sportsData.js" defer></script>
+  <script src="search.js" defer></script>
+</head>
+<body>
+  <main class="search-page">
+    <a href="index.html">Back to home</a>
+    <h1>Search Results</h1>
+    <form class="search-container" role="search" action="search.html" method="get">
+      <input type="search" name="q" aria-label="Search website" required>
+      <button type="submit">Search</button>
+    </form>
+    <p id="search-status" role="status"></p>
+    <div id="searchResults"></div>
+    <noscript>Enable JavaScript to see search results.</noscript>
+  </main>
+</body>
+</html>

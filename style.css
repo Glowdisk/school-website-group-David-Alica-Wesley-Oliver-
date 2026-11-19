@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(255, 73, 73);
+}
+
+.center {
+    text-align: center;
+}
+
+.vertical-line {
+    border-left: 20px solid rgb(0, 0, 0);
+    height: 900px;
+    position: absolute;
+    left: 20%;
+    margin-left: -300px;
+    top: 0;
+}
+
+.vertical-line {
+    border-right: 20px solid rgb(0, 0, 0);
+    height: 900px;
+    position: absolute;
+    right: 20%;
+    margin-right: -300px;
+    top: 0;
+}
